@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* Responsive styles */
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        background-color: #f2f2f2;
+      }
+      .categories {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 20px;
+        justify-content: center;
+      }
+      .category {
+        background-color: #f2f2f2;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .iframe-container {
+        margin-top: 20px;
+        overflow: hidden;
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio (change as needed) */
+        height: 100vh;
+      }
+      .iframe-container iframe {
+        border: 0;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="categories">
+      <select id="categorySelect" onchange="loadSheetData(this.value)">
+        <option value="" disabled selected>Select a category</option>
+        <option value="React">React</option>
+        <option value="HTML">HTML</option>
+        <option value="HR">CSS</option>
+        <option value="JS">JS</option>
+        <option value="Python">Python</option>
+      </select>
+    </div>
+
+    <div class="questions" id="questionContainer">
+      <!-- Questions will be dynamically added here -->
+    </div>
+
+    <script>
+      // Function to load the Google Sheet data into an iframe
+      function loadSheetData(category) {
+        var questionContainer = document.getElementById("questionContainer");
+        questionContainer.innerHTML = "";
+
+        if (category) {
+          var iframeContainer = document.createElement("div");
+          iframeContainer.classList.add("iframe-container");
+
+          var iframe = document.createElement("iframe");
+          iframe.src = getGoogleSheetURL(category);
+          iframe.frameborder = "0";
+
+          iframeContainer.appendChild(iframe);
+          questionContainer.appendChild(iframeContainer);
+        }
+      }
+
+      // Function to get the Google Sheet URL based on the selected category
+      function getGoogleSheetURL(category) {
+        var url = "";
+
+        switch (category) {
+          case "React":
+            url =
+              "https://script.google.com/macros/s/AKfycbxaxIQ0AKwlTSpaUH2mEqCJ40GllxHloULyRkpAqf9dV8uDF2Xn7nwaAuf2wGEkOin4cw/exec";
+            break;
+          case "HTML":
+            url =
+              "https://docs.google.com/forms/d/e/1FAIpQLSe-VSazw0jPsJ_eTJdfqiI60csdG2qGtZOfaxpVbPtBUNjlvw/viewform?usp=sf_link";
+            break;
+          case "HR":
+            url =
+              "https://docs.google.com/forms/d/e/1FAIpQLScIUHnqkev55J6MRkk6OZmmWh8SDR688yXSQizmiHHuvPjuUA/viewform?usp=sf_link";
+            break;
+          case "JS":
+            url =
+              "https://docs.google.com/forms/d/e/1FAIpQLSeUPyURbkwWbmDVJwfJnTRJvNt3e8tlZx0r0Tx0EZHs9RDf1g/viewform?usp=sf_link";
+            break;
+          case "Python":
+            url =
+              "https://docs.google.com/forms/d/e/1FAIpQLSfuBwRjWTIm387aTTyFEmcfzQkmMtqiW1QfwwLr8XhRYG1iGg/viewform?usp=sf_link";
+            break;
+          default:
+            break;
+        }
+
+        return url;
+      }
+    </script>
+  </body>
+</html>
