@@ -5,15 +5,21 @@
     <style>
       /* Responsive styles */
       * {
+        font-family: Young-serif, Arial, sans-serif;
         box-sizing: border-box;
+        font-size: 1rem;
       }
       body {
-        font-family: Arial, sans-serif;
-        padding: 20px;
+        font-family: Young-serif, Arial, sans-serif;
         width: 100%;
+        margin: 5px;
+        padding-top: 10px;
         height: 100vh;
         overflow: hidden;
-        background-color: #f2f2f2;
+        background-color: red;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
       }
       .categories {
         display: flex;
@@ -34,15 +40,22 @@
         overflow: hidden;
         position: relative;
         padding-bottom: 56.25%; /* 16:9 aspect ratio (change as needed) */
-        height: 100vh;
       }
       .iframe-container iframe {
         border: 0;
-        height: 100%;
+        height: 100vh;
         left: 0;
-        position: absolute;
         top: 0;
         width: 100%;
+      }
+      footer {
+        width: 100%;
+        height: 100px;
+        font-size: 0.9rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
       }
     </style>
   </head>
@@ -52,7 +65,7 @@
         <option value="" disabled selected>Select a category</option>
         <option value="React">React</option>
         <option value="HTML">HTML</option>
-        <option value="HR">CSS</option>
+        <option value="HR">HR</option>
         <option value="JS">JS</option>
         <option value="Python">Python</option>
       </select>
@@ -61,7 +74,7 @@
     <div class="questions" id="questionContainer">
       <!-- Questions will be dynamically added here -->
     </div>
-
+    <footer>@yerni kumar the developer</footer>
     <script>
       // Function to load the Google Sheet data into an iframe
       function loadSheetData(category) {
@@ -88,7 +101,7 @@
         switch (category) {
           case "React":
             url =
-              "https://script.google.com/macros/s/AKfycbxaxIQ0AKwlTSpaUH2mEqCJ40GllxHloULyRkpAqf9dV8uDF2Xn7nwaAuf2wGEkOin4cw/exec";
+              "https://script.google.com/macros/s/AKfycbzNhJqhUTdImMJbt6vHBfSsGdokZmIhYtcFyzYGZqUDlc4tmxHGSkvCr3_bjGBQKeSXUw/exec";
             break;
           case "HTML":
             url =
@@ -96,7 +109,7 @@
             break;
           case "HR":
             url =
-              "https://docs.google.com/forms/d/e/1FAIpQLScIUHnqkev55J6MRkk6OZmmWh8SDR688yXSQizmiHHuvPjuUA/viewform?usp=sf_link";
+              "https://script.google.com/macros/s/AKfycbyqnHLC3OtZNXdjZJLrs4Wfhv8ig3K8hbO4pakJxxQLE1iCaLvOZxhu0OWb67Qlew-o/exec";
             break;
           case "JS":
             url =
