@@ -102,50 +102,50 @@
       function getGoogleSheetURL(category) {
         var url = "";
 
-        switch (category) {
-          case "REACT":
-            url =
-              "https://script.google.com/macros/s/AKfycbwAe5Wq-IPvUCCjwSx3c3qkrvUvqhblegENoKgT-1xj5QtVtOiJrjOq6za4v_fdpqTy/exec";
-            break;
-          case "HTML":
-            url =
-              "https://script.google.com/macros/s/AKfycby165c8KLRmB-1GFKfH3JkNgrxakgmN_6bUgCoN1WaPH76Qp3FSCa1wxxSf_chLNh_p/exec";
-            break;
-          case "HR":
-            url =
-              "https://script.google.com/macros/s/AKfycbzY3FYp1Ue02oPIzOwYpPZM6cwzJfWI1hUQlLINki3eYZsdLITNkdlNZn9-O1JxYDEU/exec";
-            break;
-          case "JS":
-            url =
-              "https://script.google.com/macros/s/AKfycbxERO3GLaCJs1ejMcvQcu5vfVoybSjvBZUOU8Ay5op5IwCkCX4yaXpZtUFKj4ryllsB/exec";
-            break;
-          case "PYTHON":
-            url =
-              "https://script.google.com/macros/s/AKfycbzJCjLwDh-s5hy5TYwu6DzsBDal-p8AQUfNucojeLeih00BPV-9OKuRDNKD71uCD0RDNg/exec";
-            break;
-          case "DBMS":
-            url =
-              "https://script.google.com/macros/s/AKfycbxl3X1EYHtbHkhT5CXb4AVkrXFYsaTtfz1mGawK0K-PtET0BlQela0RVpXIZYlhWKyw/exec";
-            break;
-          case "SQL":
-            url =
-              "https://script.google.com/macros/s/AKfycbzhfh-Gg88TtloGKH2jpZ18hOxJIqGFVFXRgVNJ5-M2cHyhb7QLK7Inkz-5pWcNTWE/exec";
-            break;
-          case "OOPS":
-            url =
-              "https://script.google.com/macros/s/AKfycbych_rqPZQRrmPGvWXvHaGoWjgzNvdUPtasitSzswLWQhZqj7lY9b746i1hnxYRXZhNnQ/exec";
-            break;
-          case "C":
-            url =
-              "https://script.google.com/macros/s/AKfycbw326HKm7qUUb2tSC4NHC2WPf_Y8FnLqphXq6OoRq_ZLqeL2w6QJTdEsVVSrJQbXLY_BQ/exec";
-            break;
-          case "TIPS":
-            url =
-              "https://script.google.com/macros/s/AKfycbxtEkiwxfEbmA81gUo462y8DYa7wX84hTTOzo7jytevU1ZYOvVJ2-M20I9XNd9rcp8Z/exec";
-            break;
-          default:
-            break;
-        }
+        // switch (category) {
+        //   case "REACT":
+        //     url =
+        //       "https://script.google.com/macros/s/AKfycbwAe5Wq-IPvUCCjwSx3c3qkrvUvqhblegENoKgT-1xj5QtVtOiJrjOq6za4v_fdpqTy/exec";
+        //     break;
+        //   case "HTML":
+        //     url =
+        //       "https://script.google.com/macros/s/AKfycby165c8KLRmB-1GFKfH3JkNgrxakgmN_6bUgCoN1WaPH76Qp3FSCa1wxxSf_chLNh_p/exec";
+        //     break;
+        //   case "HR":
+        //     url =
+        //       "https://script.google.com/macros/s/AKfycbzY3FYp1Ue02oPIzOwYpPZM6cwzJfWI1hUQlLINki3eYZsdLITNkdlNZn9-O1JxYDEU/exec";
+        //     break;
+        //   case "JS":
+        //     url =
+        //       "https://script.google.com/macros/s/AKfycbxERO3GLaCJs1ejMcvQcu5vfVoybSjvBZUOU8Ay5op5IwCkCX4yaXpZtUFKj4ryllsB/exec";
+        //     break;
+        //   case "PYTHON":
+        //     url =
+        //       "https://script.google.com/macros/s/AKfycbzJCjLwDh-s5hy5TYwu6DzsBDal-p8AQUfNucojeLeih00BPV-9OKuRDNKD71uCD0RDNg/exec";
+        //     break;
+        //   case "DBMS":
+        //     url =
+        //       "https://script.google.com/macros/s/AKfycbxl3X1EYHtbHkhT5CXb4AVkrXFYsaTtfz1mGawK0K-PtET0BlQela0RVpXIZYlhWKyw/exec";
+        //     break;
+        //   case "SQL":
+        //     url =
+        //       "https://script.google.com/macros/s/AKfycbzhfh-Gg88TtloGKH2jpZ18hOxJIqGFVFXRgVNJ5-M2cHyhb7QLK7Inkz-5pWcNTWE/exec";
+        //     break;
+        //   case "OOPS":
+        //     url =
+        //       "https://script.google.com/macros/s/AKfycbych_rqPZQRrmPGvWXvHaGoWjgzNvdUPtasitSzswLWQhZqj7lY9b746i1hnxYRXZhNnQ/exec";
+        //     break;
+        //   case "C":
+        //     url =
+        //       "https://script.google.com/macros/s/AKfycbw326HKm7qUUb2tSC4NHC2WPf_Y8FnLqphXq6OoRq_ZLqeL2w6QJTdEsVVSrJQbXLY_BQ/exec";
+        //     break;
+        //   case "TIPS":
+        //     url =
+        //       "https://script.google.com/macros/s/AKfycbxtEkiwxfEbmA81gUo462y8DYa7wX84hTTOzo7jytevU1ZYOvVJ2-M20I9XNd9rcp8Z/exec";
+        //     break;
+        //   default:
+        //     break;
+        // }
 
         return url;
       }
