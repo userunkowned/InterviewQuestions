@@ -15,11 +15,11 @@
         margin: 0;
         padding-top: 10px;
         height: 100vh;
-        overflow: hidden;
         background-color: #52bb7a;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        overflow: hidden;
       }
       .select-container {
         display: flex;
@@ -83,16 +83,16 @@
 
       .iframe-container {
         margin-top: 20px;
-        overflow: hidden;
         position: relative;
-        padding-bottom: 56.25%; /* 16:9 aspect ratio (change as needed) */
+        overflow: hidden;
+        /* Remove the padding-bottom */
       }
       .iframe-container iframe {
         border: 0;
         left: 0;
         top: 0;
-        height: 100vh;
-        width: 100%;
+        width: 100%; /* Set the width to 100% */
+        height: 92vh; /* Set the height to 100% */
       }
       footer {
         width: 100%;
@@ -127,6 +127,9 @@
     <div class="questions" id="questionContainer">
       <!-- Questions will be dynamically added here -->
     </div>
+    <footer>
+      <span>@yerni kumar The Developer</span>
+    </footer>
     <script>
       // Function to load the Google Sheet data into an iframe
       function loadSheetData(category) {
@@ -186,14 +189,13 @@
             url =
               "https://script.google.com/macros/s/AKfycbw1At8zhVbRX-IESCoKBWu7nq6DD4PArHNgxTuDFPuMlesUn-EAq8IZEoeebQCLcAam/exec";
             break;
-          case "INTERVIEW TIPS":
+          case "TIPS":
             url =
               "https://script.google.com/macros/s/AKfycbxNleQdPN-BrC4ZeJ2QqUMGRvIf-AP6ns-UpRcNvzUdaf1ZKFiRDEIUQf2h1keYibd6/exec";
             break;
           default:
             break;
         }
-
         return url;
       }
     </script>
