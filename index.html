@@ -16,7 +16,7 @@
         padding-top: 10px;
         height: 100vh;
         overflow: hidden;
-        background-color: red;
+        background-color: #52bb7a;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -26,6 +26,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        background-color: #52bb7a;
       }
       select {
         -webkit-appearance: none;
@@ -35,8 +36,8 @@
         outline: 0;
         box-shadow: none;
         border: 2px solid #2b2e2e;
-        background: red;
-        background-image: none;
+        border-radius: 10px;
+        background-color: #52bb7a;
         flex: 1;
         padding: 0 0.5em;
         color: #2b2e2e;
@@ -53,7 +54,7 @@
         width: 20em;
         height: 3em;
         line-height: 3;
-        background: #5c6664;
+        background: #52bb7a;
         overflow: hidden;
         border-radius: 0.25em;
       }
@@ -149,53 +150,54 @@
       function getGoogleSheetURL(category) {
         var url = "";
         switch (category) {
-            case "REACT":
-              url =
-                "https://script.google.com/macros/s/AKfycbwZ2WLe8-a_FYH2WfcZsk3xCj6bzdkNliJSmY-SdcLfUiWhDaCQBqZQjww8xSAVXwMktQ/exec";
-              break;
-            case "PYTHON":
-              url =
-                "https://script.google.com/macros/s/AKfycbxt-v5tmkUH8iKSRqVIT8InmUF-FukPNynIhhp070pWo1Raqu7IIs6r1LABiKzocd95hw/exec";
-              break;
-            case "JS":
-              url =
-                "https://script.google.com/macros/s/AKfycbwEVxWbD77uYhRiVngHQyHbDVR-sTD2BixVpEV7DP-JrdVymGujGCYwb5edNKuFRSZd/exec";
-              break;
-            case "HTML":
-              url =
-                "https://script.google.com/macros/s/AKfycbywnHfw2X0yR0hHa4q1aQ7SX2YcaFA6ZfIacbORvd-uIu26hnMbGxYm7XOoPs60NckV/exec";
-              break;
-            case "HR":
-              url =
-                "https://script.google.com/macros/s/AKfycbzg185TtxSiCskBM62_fDxDIUDVqhqPcAVpD_RMurBjYWPL9Fl8CjJ6hiz4bNqOAzPU/exec";
-              break;
-            case "C":
-              url =
-                "https://script.google.com/macros/s/AKfycbwm3OHOrjHIAViuUC6_9W5PIoU-I0objKDPCZFxYN4u-_vsaOJod_WLIhaUAinf8BaiuA/exec";
-              break;
-            case "SQL":
-              url =
-                "https://script.google.com/macros/s/AKfycbzKRSX6lVeHCtb3qf8zqprod4OaVpk_X9mwYeHCry-oJbqnAN8VfgvHu5IWnhR2Dnk7/exec";
-              break;
-            case "OOPS":
-              url =
-                "https://script.google.com/macros/s/AKfycbzu_QliZT814qdG_TQOnaay0k0RmZ6CeiUdR0NchQnAjG0aH2mK8nyc6NZTxHCD4GRoJw/exec";
-              break;
-            case "DBMS":
-              url =
-                "https://script.google.com/macros/s/AKfycbw1At8zhVbRX-IESCoKBWu7nq6DD4PArHNgxTuDFPuMlesUn-EAq8IZEoeebQCLcAam/exec";
-              break;
-            case "INTERVIEW TIPS":
-              url =
-                "https://script.google.com/macros/s/AKfycbxNleQdPN-BrC4ZeJ2QqUMGRvIf-AP6ns-UpRcNvzUdaf1ZKFiRDEIUQf2h1keYibd6/exec";
-              break;
-            default:
-              break;
-          }
-        
+          case "REACT":
+            url =
+              "https://script.google.com/macros/s/AKfycbwZ2WLe8-a_FYH2WfcZsk3xCj6bzdkNliJSmY-SdcLfUiWhDaCQBqZQjww8xSAVXwMktQ/exec";
+            break;
+          case "PYTHON":
+            url =
+              "https://script.google.com/macros/s/AKfycbxt-v5tmkUH8iKSRqVIT8InmUF-FukPNynIhhp070pWo1Raqu7IIs6r1LABiKzocd95hw/exec";
+            break;
+          case "JS":
+            url =
+              "https://script.google.com/macros/s/AKfycbwEVxWbD77uYhRiVngHQyHbDVR-sTD2BixVpEV7DP-JrdVymGujGCYwb5edNKuFRSZd/exec";
+            break;
+          case "HTML":
+            url =
+              "https://script.google.com/macros/s/AKfycbywnHfw2X0yR0hHa4q1aQ7SX2YcaFA6ZfIacbORvd-uIu26hnMbGxYm7XOoPs60NckV/exec";
+            break;
+          case "HR":
+            url =
+              "https://script.google.com/macros/s/AKfycbzg185TtxSiCskBM62_fDxDIUDVqhqPcAVpD_RMurBjYWPL9Fl8CjJ6hiz4bNqOAzPU/exec";
+            break;
+          case "C":
+            url =
+              "https://script.google.com/macros/s/AKfycbwm3OHOrjHIAViuUC6_9W5PIoU-I0objKDPCZFxYN4u-_vsaOJod_WLIhaUAinf8BaiuA/exec";
+            break;
+          case "SQL":
+            url =
+              "https://script.google.com/macros/s/AKfycbzKRSX6lVeHCtb3qf8zqprod4OaVpk_X9mwYeHCry-oJbqnAN8VfgvHu5IWnhR2Dnk7/exec";
+            break;
+          case "OOPS":
+            url =
+              "https://script.google.com/macros/s/AKfycbzu_QliZT814qdG_TQOnaay0k0RmZ6CeiUdR0NchQnAjG0aH2mK8nyc6NZTxHCD4GRoJw/exec";
+            break;
+          case "DBMS":
+            url =
+              "https://script.google.com/macros/s/AKfycbw1At8zhVbRX-IESCoKBWu7nq6DD4PArHNgxTuDFPuMlesUn-EAq8IZEoeebQCLcAam/exec";
+            break;
+          case "INTERVIEW TIPS":
+            url =
+              "https://script.google.com/macros/s/AKfycbxNleQdPN-BrC4ZeJ2QqUMGRvIf-AP6ns-UpRcNvzUdaf1ZKFiRDEIUQf2h1keYibd6/exec";
+            break;
+          default:
+            break;
+        }
+
         return url;
       }
     </script>
   </body>
 </html>
+
 
